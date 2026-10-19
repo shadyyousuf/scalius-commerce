@@ -1,0 +1,30 @@
+.atelier-header { background: var(--color-background); border-block-end: 1px solid var(--color-border); z-index: var(--scalius-z-header); }
+.atelier-header[data-sticky-header] { position: sticky; inset-block-start: 0; }
+.atelier-bar { display: flex; align-items: center; gap: 1.5rem; max-inline-size: 80rem; margin-inline: auto; padding: 0.75rem 1rem; }
+.atelier-logo { font: 600 1.25rem/1 var(--font-heading); color: var(--color-foreground); text-decoration: none; }
+.atelier-nav ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.atelier-nav-item { position: relative; }
+.atelier-mega { position: absolute; inset-inline-start: 0; inset-block-start: 100%; display: grid; grid-template-columns: 1fr 15rem; gap: 2rem; inline-size: min(56rem, 90vw); padding: 1.5rem; background: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.atelier-mega[hidden] { display: none; }
+.atelier-mega-cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 1rem; }
+.atelier-mega-head { font-weight: 600; }
+.atelier-mega-promo img { inline-size: 100%; block-size: auto; border-radius: var(--radius-md); }
+.atelier-actions { display: flex; gap: 1rem; margin-inline-start: auto; }
+.atelier-menu-button { display: none; }
+.atelier-sr { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 48rem) { .atelier-nav { display: none; } .atelier-menu-button { display: inline-flex; } }
+.atelier-card { display: grid; gap: 0.5rem; }
+.atelier-card-media { position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--radius-md); }
+.atelier-card-media img { inline-size: 100%; block-size: 100%; object-fit: cover; }
+.atelier-card-hover { position: absolute; inset: 0; opacity: 0; transition: opacity 0.2s; }
+.atelier-card:hover .atelier-card-hover { opacity: 1; }
+.atelier-pdp { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2.5rem; max-inline-size: 80rem; margin-inline: auto; padding: 1rem; }
+.atelier-stack { display: grid; gap: 0.75rem; }
+.atelier-stack img { inline-size: 100%; block-size: auto; }
+.atelier-pdp-buy { position: sticky; align-self: start; }
+@media (max-width: 48rem) { .atelier-pdp { grid-template-columns: 1fr; } .atelier-stack { grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto; scroll-snap-type: x mandatory; } .atelier-stack img { scroll-snap-align: start; } }
+.atelier-lookbook { display: grid; gap: 2rem; }
+.atelier-look { position: relative; margin: 0; }
+.atelier-look img { inline-size: 100%; block-size: auto; }
+.atelier-look figcaption { position: absolute; inset-inline-start: 2rem; inset-block-end: 2rem; color: var(--color-primary-foreground); }
+.atelier-look-rail { display: flex; gap: 1rem; overflow-x: auto; list-style: none; padding: 0 1rem; }

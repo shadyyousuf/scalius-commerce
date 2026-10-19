@@ -1,0 +1,9 @@
+.acme-engrave { margin-block: 1rem; }
+.acme-engrave figcaption { font: 600 0.875rem/1.4 var(--font-body, system-ui); color: var(--color-foreground); }
+.acme-engrave-plate {
+  display: grid; place-items: center; min-block-size: 4.5rem; margin-block-start: 0.5rem;
+  border-radius: var(--radius-md, 0.5rem); background: var(--plate, #c9a227); color: #2b2310;
+  font: 500 1.5rem/1.2 Georgia, serif; letter-spacing: 0.08em; text-align: center; padding-inline: 1rem;
+}
+.acme-engrave-plate[data-font="script"] { font-family: "Brush Script MT", cursive; letter-spacing: 0; }
+.acme-engrave-plate[data-font="block"] { font-family: system-ui, sans-serif; text-transform: uppercase; }

@@ -1,0 +1,8 @@
+{
+  "name": "@acme/headless-next",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "$comment": "Code only. @scalius/api-client is private: it cannot be installed from a registry (DX-REPORT HL-1).",
+  "dependencies": { "next": "16.0.0", "react": "19.2.8", "react-dom": "19.2.8" }
+}

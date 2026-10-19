@@ -1,0 +1,27 @@
+{
+  "$comment": "HACK (DX-REPORT F-DX1): scratch-apps/ is outside pnpm-workspace.yaml, so the scaffold's `workspace:*` deps never link. These paths stand in for an installed @scalius/plugin-sdk and @scalius/api-client.",
+  "extends": "../packages/tsconfig/base.json",
+  "compilerOptions": {
+    "types": [],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@scalius/plugin-sdk/storefront",
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "paths": {
+      "@scalius/plugin-sdk": ["../packages/plugin-sdk/src/index.ts"],
+      "@scalius/plugin-sdk/fixtures": ["../packages/plugin-sdk/src/fixtures.ts"],
+      "@scalius/plugin-sdk/manifest": ["../packages/plugin-sdk/src/manifest.ts"],
+      "@scalius/plugin-sdk/testing": ["../packages/plugin-sdk/src/testing.ts"],
+      "@scalius/plugin-sdk/storefront": ["../packages/plugin-sdk/src/storefront/index.ts"],
+      "@scalius/plugin-sdk/storefront/testing": ["../packages/plugin-sdk/src/storefront/testing.ts"],
+      "@scalius/plugin-sdk/storefront/jsx-runtime": ["../packages/plugin-sdk/src/storefront/jsx-runtime.ts"],
+      "@scalius/plugin-sdk/storefront/jsx-dev-runtime": ["../packages/plugin-sdk/src/storefront/jsx-dev-runtime.ts"],
+      "@scalius/plugin-sdk/island": ["../packages/plugin-sdk/src/storefront/island.ts"],
+      "@scalius/api-client": ["../packages/api-client/src/index.ts"],
+      "@scalius/api-client/*": ["../packages/api-client/src/generated/*"],
+      "@scalius/shared/*": ["../packages/shared/src/*"]
+    }
+  }
+}
